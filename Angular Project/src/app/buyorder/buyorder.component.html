@@ -1,0 +1,50 @@
+<div class="bacgroundcolor">
+
+    <div class="orderlist" *ngFor="let emp of customerservice.BuyProduct">
+        <div class="orderdetails">
+            <div class="pic item"></div>
+            <div class="name item"><b>Product Name</b> <i>{{emp.productName}}</i></div>
+            <div class="price item"><b>Price</b> <i>{{emp.price/2}}</i></div>
+            <div class="quentity item"><b>Quentity</b> <i>{{customerservice.quentity}}</i></div>
+            <div class="cupon item"><b>Cupon Avaliable</b>
+                <div>
+                    <form><input type="text" (keyup)="cupontext(cuponvalue.value)" #cuponvalue class="form"></form>
+                </div>
+                <small class="applyit" (click)="appycupon()">apply it</small>
+                <small [style.color]="err?'green':'red'">{{usercpnn}}</small>
+
+
+            </div>
+            <div class="totalprice item"><b>Total Price</b><small>T Price
+                    :{{emp.price/2*customerservice.quentity}}</small><small>Cupon :{{cupponapplied}}
+                </small><small>FinalPrice :
+                    {{emp.price/2*customerservice.quentity-cupponprice}}</small></div>
+
+        </div>
+
+        <div class="container">
+            <div class="button" (click)="placeorderenable()" *ngIf="button"><button>payment</button></div>
+        </div>
+    </div>
+
+
+
+    <div *ngIf="placeoderdiv">
+        <div class="payment">
+            <div class="heading method">
+                <h5>Choose payment Method :</h5>
+            </div>
+            <div class="cod method" (click)="codmethod()">For COD Press Here <br> <small
+                    style="color: green;">{{codmassag}}</small></div>
+            <div class="Upi method" (click)="upimethod()">For Upi Press Here <div>
+                    <form *ngIf="upi" class="transation"><input type="text" placeholder="Enter Transation id"
+                            (keyup)="transationfun(trans.value)" #trans></form>
+                </div>
+            </div>
+
+        </div>
+        <a routerLink="../finalpage">
+            <div class="placeorder" *ngIf="placeorder" (click)="finalplaceorder()"><button>PlaceOrder</button></div>
+        </a>
+    </div>
+</div>

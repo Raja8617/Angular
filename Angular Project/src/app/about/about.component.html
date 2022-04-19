@@ -1,0 +1,33 @@
+<div class="bacgrountcolor">
+    <div class="aboutus">
+        <div class="heading">About Us</div>
+        <div class="information">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, doloremque est,
+            reiciendis
+            ipsam aperiam mollitia eveniet neque inventore nisi pariatur harum. Incidunt, voluptatum accusamus quidem
+            praesentium qui ab unde architecto? Amet voluptatum laudantium, culpa quae nesciunt et atque qui facilis
+            reprehenderit aliquid provident delectus natus a cum in nostrum? Earum.</div>
+
+    </div>
+
+
+    <div class="forquery" *ngIf="!b">
+
+        <div class="heading" style="color: blueviolet;" (click)="forquery()">For More Query</div>
+
+        <div *ngIf="formorequery">
+
+            <form action="" form action="">
+
+                <input type="text" placeholder="Enter Your Name">
+                <input type="text" placeholder=" Enter Phone No">
+                <h1 class="button" (click)="button()">Submit</h1>
+            </form>
+
+
+        </div>
+
+
+    </div>
+    <div *ngIf="b" style="text-align: center;margin: 4vw; font-size: 3vw;color: green;">Your Query has been submitted
+    </div>
+</div>

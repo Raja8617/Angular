@@ -1,0 +1,126 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1vw;
+    height: 5vw;
+}
+
+.item {
+    width: 15vw;
+    background-color: black;
+    color: white;
+    height: 2vw;
+    border-radius: 4vw;
+    margin: 1vw;
+}
+
+.account:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.orders:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+
+}
+
+.item1 {
+    width: 100%;
+}
+
+.ordercontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.OrderContainerItem {
+    display: flex;
+    margin: 0.5vw;
+    justify-content: space-evenly;
+}
+
+.orderss {
+    height: 10vw;
+    width: 10vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.productpic {
+    background-image: url(../../assets/category-1.jpg);
+    background-size: cover;
+}
+
+button {
+    font-size: 1vw;
+    outline-style: none;
+    border: none;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    padding: 0.4vw 2vw;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+button:hover {
+    color: aliceblue;
+    background-color: red;
+}
+
+
+.bacground {
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accountsection {
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(37, 8, 105);
+    font-size: 2vw;
+    flex-direction: column;
+}
+
+input {
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid rgb(14, 185, 185);
+    width: 20vw;
+    outline-style: none;
+}
+
+.update {
+    margin-top: 2vw;
+}

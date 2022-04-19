@@ -1,0 +1,47 @@
+<div class="bacgroungcolor">
+
+    <div class="heading">
+        <div class="item" (click)="yourfunction(0)">All items</div>
+        <div class="item" (click)="yourfunction(1)">Man items</div>
+        <div class="item" (click)="yourfunction(2)">Women items</div>
+        <div class="item" (click)="yourfunction(3)">Kids items</div>
+    </div>
+
+
+
+
+    <select class="select" (change)="slectchanges($event)">
+        <option class="selects" value=0>Filter</option>
+        <option class="selects" value=1>low-high</option>
+        <option class="selects" value=2>High-low</option>
+        <option class="selects" value=3>Price > 500</option>
+        <option class="selects" value=4>Price < 500</option>
+    </select>
+
+
+
+
+
+
+    <div class="container">
+        <div id="Container" *ngFor="let emp of customerservice.temporaryProduct">
+
+
+            <a routerLink="../productcheck" (click)="productcheck(emp.productId)" class="product">
+                <img src="../../../assets/category-1.jpg" class="itemimg" alt="products">
+                <div class="name">
+                    <i style="color: #160baf;">{{emp.productName}}</i>
+                </div>
+                <div class="price">
+                    <del class="flextitem"> {{emp.price}}</del>
+                    <i class="flextitem"> {{emp.price-(emp.price/2)}}</i>
+                    <i style="color: green;" class="flextitem">50%off</i>
+                </div>
+                <i>free Delevery</i>
+            </a>
+        </div>
+
+
+
+    </div>
+</div>

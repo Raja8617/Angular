@@ -1,0 +1,58 @@
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1vw;
+}
+
+.heading {
+    color: brown;
+    font-size: 4vw;
+    margin: 1vw;
+}
+
+
+.forquery {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 25vw;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+}
+
+input {
+    margin: 1.5vw;
+    width: 18vw;
+    border: none;
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size: 2vw;
+    outline-style: none;
+}
+
+
+.button {
+    font-size: 1.5vw;
+    outline-style: none;
+    border: none;
+    background-color: rgb(7, 130, 146);
+    color: rgb(167, 196, 196);
+    padding: 0.4vw 2vw;
+    border-radius: 0.5vw;
+
+}
+
+.button:hover {
+    color: aliceblue;
+}

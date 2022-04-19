@@ -1,0 +1,50 @@
+<h1 *ngIf="!lg" style="color: red; text-align: center;margin-top: 18vw;"> please Login</h1>
+<h1 *ngIf="!lg" style="color: red; text-align: center;margin-top: 1.5vw;margin-bottom: 18vw;">
+
+    <form><button class="loginbutton"><a href="http://localhost:4200/login">login</a></button></form>
+
+</h1>
+
+<div *ngIf="lg">
+
+    <div class="container" *ngFor="let emp of customerservice.BuyProduct">
+        <div class="pic"></div>
+        <div class="description">
+            <i></i>
+            <div class="productname"><b>Product Name : </b>{{emp.productName}}</div>
+            <div class="price"> <b>Price :</b> {{emp.price/2}} <i style="color: green;">(50%off)</i> </div>
+            <b>Selected Size</b>
+            <div class="size">
+                <select class="select">
+                    <option value="No Size">AnySize</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="Xl">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <b>Quentity</b> <i style="color: red;">{{massage}}</i>
+            <select class="select" (change)="slectchanges($event)">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+            </select>
+            <div class="ByeNow" *ngIf='quentity else elseBlock'>
+                <a routerLink="../buyorder">
+                    <div><button>Buy Now</button></div>
+                </a>
+            </div>
+            <ng-template #elseBlock>
+                <div><button (click)="byfunction()">Buy Now</button></div>
+            </ng-template>
+
+            <div class="productdescription">
+                <div class="descriptio"><b>Description</b></div><i>{{emp.productDescription}}</i>
+            </div>
+
+        </div>
+    </div>
+
+</div>

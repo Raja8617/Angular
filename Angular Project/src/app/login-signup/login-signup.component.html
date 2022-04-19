@@ -1,0 +1,68 @@
+<div class="loginsignup">
+    <div class="login" *ngIf='value else elseBlock'>
+        <div class="error" *ngIf="invalidLogin" style="color: red;">Invalid UserName/PassWord</div>
+        <form [formGroup]="loginfrom" (ngSubmit)="loginSubmit()">
+            <div class="heading"><i>Login Page</i></div>
+            <div class="formpage formpagelogin">
+                <div><i> Mobile No</i></div>
+                <div><input type="text" name="UserName" placeholder="" formControlName="phoneNo" required></div> <span
+                    style="color: red; font-size: 1vw;" *ngIf="phoneNo && phoneNo.invalid &&  phoneNo.touched">not
+                    vaild</span>
+                <div><i>Password</i></div>
+                <div><input type="password" name="Password" placeholder="" formControlName="passWord" required></div>
+                <span style="color: red; font-size: 1vw;" *ngIf="passWord && passWord.invalid &&  passWord.touched">not
+                    vaild</span>
+            </div>
+            <div> <button [disabled]="loginfrom.invalid"> Login</button></div>
+        </form>
+        <i class="NewUser" (click)="LoginSingupfunction()">New user</i>
+        <div style="color: red;">{{massage}}</div>
+
+    </div>
+
+
+
+    <ng-template #elseBlock>
+        <div class="signup">
+            <form [formGroup]="signUpfrom" (ngSubmit)="SingupSubmit()" class="signupform">
+                <div class="heading"><i>SignUp Page</i></div>
+                <div class="formpage formpagesignup">
+                    <div><i> Enter Name</i></div>
+                    <div><input type="text" name="customerName" formControlName="customerName" required></div><span
+                        style="color: red; font-size: 1vw;"
+                        *ngIf="customerName && customerName.invalid && customerName.touched">not vaild</span>
+                    <div><i>Enter Address</i></div>
+                    <div><input type="text" name=" address" formControlName="address" required></div><span
+                        style="color: red; font-size: 1vw;" *ngIf="address && address.invalid && address.touched">not
+                        vaild</span>
+                    <div><i> Enter State</i></div>
+                    <div><input type="text" name="state" formControlName="state" required></div><span
+                        style="color: red; font-size: 1vw;" *ngIf="state && state.invalid && state.touched">not
+                        vaild</span>
+                    <div><i> Enter Pincode</i></div>
+                    <div><input type="text" name="pinCode" formControlName="pinCode" required></div><span
+                        style="color: red; font-size: 1vw;" *ngIf="pinCode && pinCode.invalid && pinCode.touched">not
+                        vaild</span>
+                    <div><i> Enter Phone Number</i></div>
+                    <div><input type="text" name="signphoneNo" #pno formControlName="signphoneNo"
+                            (keyup)="checkpno(pno.value)" required></div><span style="color: red; font-size: 1vw;"
+                        *ngIf="signphoneNo && signphoneNo.invalid && signphoneNo.touched">{{notvalidmassage}}</span>
+                    <div><i>Password</i></div>
+                    <div><input type="password" name="signpassWord" formControlName="signpassWord" required></div><span
+                        style="color: red; font-size: 1vw;"
+                        *ngIf="signpassWord && signpassWord.invalid && signpassWord.touched">not vaild</span>
+
+                </div>
+                <div><button [disabled]="signUpfrom.invalid">SignUp</button></div>
+
+
+            </form>
+            <i class="NewUser" (click)="LoginSingupfunction()">Login</i>
+
+
+
+        </div>
+
+    </ng-template>
+
+</div>

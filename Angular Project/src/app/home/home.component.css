@@ -1,0 +1,99 @@
+.home {
+    background-image: url(../../assets/HomePagePicture/103133_3926675_602252_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 37vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.homebag {
+    background-color: rgb(145, 221, 183);
+}
+
+button {
+    font-size: 1rem;
+    outline-style: none;
+    border: none;
+    background-color: black;
+    color: rgb(167, 196, 196);
+    padding: 0.8vw 1vw;
+    border-radius: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+button:hover {
+    color: aliceblue;
+}
+
+
+.offer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.offerheading {
+    text-align: center;
+    font-size: 2vw;
+    margin: 2vw;
+}
+
+.offers {
+    width: 30vw;
+    height: 10vw;
+    background-size: cover;
+}
+
+.offer1 {
+    background-image: url('../../assets/HomePagePicture/vector-shopping-e-commerce-banner-set-.jpg');
+}
+
+.offer2 {
+    background-image: url('../../assets/HomePagePicture/vector-shopping-e-commerce-banner-set-flat.jpg');
+}
+
+.offer3 {
+    background-image: url('../../assets/HomePagePicture/vector-shopping-e-commerce.jpg');
+}
+
+.shoppingheading {
+
+    text-align: center;
+    font-size: 1.5vw;
+    margin: 2.5vw 2.5vw 0 2.5vw;
+}
+
+.shoping {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 25vw;
+
+
+}
+
+.shoppings {
+    height: 20vw;
+    width: 20vw;
+    background-size: cover;
+}
+
+.man {
+    background-image: url('../../assets/HomePagePicture/Mens.jpg');
+}
+
+.woman {
+    background-image: url('../../assets/HomePagePicture/women.jpg');
+}
+
+.kids {
+    background-image: url('../../assets/HomePagePicture/kids.jpg');
+}

@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #070707;
+}
+
+
+.navbar {
+
+  background-color: #f5eaea;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #070707;
+  font-size: 16px;
+  padding: 0 16px;
+  font-size: 1.5vw;
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+
+  color: rgb(78, 228, 220);
+  background-color: rgb(12, 12, 12);
+  border-radius: 1vw;
+  text-align: center;
+}
+
+.footer {
+
+  background-color: #f5eaea;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 3vw;
+  margin: 0;
+}
+
+.cart:hover {
+  color: rgb(245, 46, 11);
+}
+
+.in:hover {
+  color: rgb(95, 245, 9);
+}

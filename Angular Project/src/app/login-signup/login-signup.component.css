@@ -1,0 +1,77 @@
+.loginsignup {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vw;
+
+}
+
+.login {
+    height: 40vw;
+    width: 30vw;
+
+}
+
+.heading {
+    margin-bottom: 2vw;
+    font-size: 3vw;
+    color: rgb(13, 82, 82);
+}
+
+.signup {
+
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.formpage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 1vw;
+    height: 20vw;
+    font-size: 1.5vw;
+
+}
+
+.formpagesignup {
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    height: 34vw;
+}
+
+button {
+    font-size: 1.5vw;
+    outline-style: none;
+    border: none;
+    background-color: rgb(7, 130, 146);
+    color: rgb(167, 196, 196);
+    padding: 0.4vw 2vw;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+button:hover {
+    color: aliceblue;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgb(15, 171, 182);
+    outline: none;
+}
+
+input {
+    text-align: center;
+}
+
+.signupform {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
+}

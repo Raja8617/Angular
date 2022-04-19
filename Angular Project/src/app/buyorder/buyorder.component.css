@@ -1,0 +1,123 @@
+.orderdetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 4vw;
+    flex-wrap: wrap;
+    font-size: 1.2vw;
+
+
+}
+
+.container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4vw;
+    flex-wrap: wrap;
+    width: 7vw;
+
+
+}
+
+
+.item {
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 1.4vw;
+    font-style: normal;
+    padding-top: 0.7vw;
+
+}
+
+b {
+    margin-bottom: 0.6vw;
+    color: coral;
+    font-size: 1.2vw;
+}
+
+.pic {
+    background-image: url('../../assets/category-1.jpg');
+    background-size: cover;
+}
+
+.form {
+    border: none;
+    outline: none;
+    width: 8vw;
+    height: 1.4vw;
+    border-bottom: 2px solid rgb(34, 34, 75);
+    text-align: center;
+}
+
+button {
+    font-size: 1.5vw;
+    outline-style: none;
+    border: none;
+    background-color: rgb(7, 130, 146);
+    color: rgb(167, 196, 196);
+    padding: 0.4vw 2vw;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+button:hover {
+    color: aliceblue;
+}
+
+.applyit:hover {
+    color: aqua;
+    background-color: rgb(216, 54, 54);
+    border-radius: 5px;
+}
+
+
+
+.payment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 6vw;
+}
+
+.method {
+    width: 20vw;
+    height: 10vw;
+    text-align: center;
+    color: blue;
+}
+
+h5 {
+    color: black;
+}
+
+.transation {
+    margin-top: 1vw;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid blue;
+    outline-style: none;
+    text-align: center;
+}
+
+.placeorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+}
+
+.bacgroundcolor {
+    height: 86vh;
+}

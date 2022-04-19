@@ -1,0 +1,87 @@
+<div class="bacground">
+    <h1 *ngIf="!this.user.ng" style="color: red; text-align: center;margin-top: 18vw;"> please Login</h1>
+    <h1 *ngIf="!this.user.ng" style="color: red; text-align: center;margin-top: 1.5vw;margin-bottom: 18vw;">
+
+        <form><button><a href="http://localhost:4200/login">login</a></button></form>
+
+    </h1>
+    <div *ngIf="this.user.ng">
+        <div class="heading">
+            <div class="account item" (click)="account()">Your Account</div>
+            <div class="orders item" (click)="listOrder()">Orders</div>
+            <a href="http://localhost:4200/login">
+                <div class="orders item">LogOut</div>
+            </a>
+        </div>
+
+
+
+        <div class="container" *ngIf="ord">
+            <div class="massage orderss" *ngIf="mg" style="color: red; ">
+                <h5>{{massage}}</h5>
+            </div>
+            <div class="item1 ordercontainer">
+                <div class="OrderContainerItem" *ngFor="let emp of Orderservice.CurrentUserOrder">
+                    <div class="productpic orderss"></div>
+                    <div class="orerid orderss">Order Id <br>{{emp.orderId}}</div>
+                    <div class="paymentid orderss">Payment Id <br>{{emp.paymentId}}</div>
+                    <div class="totalprice orderss">Total Price <br>{{emp.totalPrice}}</div>
+                    <div class="cancleorder orderss" (click)=" cancleorder(emp.orderId)"><button>cancle</button></div>
+
+
+                </div>
+                <div class="massage" style="color: red; margin: 4vw; font-size: 3vw;"
+                    *ngIf="Orderservice.CurrentUserOrder.length==0">{{orderpresent}}</div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="accountsection" *ngIf="acc">
+            <div *ngIf="sb" style="color: red;">
+                <h3>{{signupsubmitmassage}}</h3>
+            </div>
+            <form [formGroup]="signUpfrom" (ngSubmit)="SingupSubmit()" class="signupform">
+                <div>
+                    <div><i> Your Name</i></div>
+                    <div><input type="text" name="customerName" formControlName="customerName" required></div><span
+                        style="color: red; font-size: 1vw;"
+                        *ngIf="customerName && customerName.invalid && customerName.touched">not vaild</span>
+                    <div><i>Your Address</i></div>
+                    <div><input type="text" name=" address" formControlName="address" required></div><span
+                        style="color: red; font-size: 1vw;" *ngIf="address && address.invalid && address.touched">not
+                        vaild</span>
+                    <div><i> Your State</i></div>
+                    <div><input type="text" name="state" formControlName="state" required></div><span
+                        style="color: red; font-size: 1vw;" *ngIf="state && state.invalid && state.touched">not
+                        vaild</span>
+                    <div><i> Your Pincode</i></div>
+                    <div><input type="text" name="pinCode" formControlName="pinCode" required></div><span
+                        style="color: red; font-size: 1vw;" *ngIf="pinCode && pinCode.invalid && pinCode.touched">not
+                        vaild</span>
+                    <div><i> Your Password</i></div>
+                    <div><input type="password" name="signpassWord" formControlName="signpassWord" required></div><span
+                        style="color: red; font-size: 1vw;"
+                        *ngIf="signpassWord && signpassWord.invalid && signpassWord.touched">not vaild</span>
+
+                </div>
+
+
+                <button *ngIf="updt">Update</button>
+            </form>
+
+            <div class="update" (click)="updateit()">
+                <h4>{{Updateitmassage}}</h4>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
